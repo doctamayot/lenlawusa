@@ -68,6 +68,17 @@ export const translations = {
             'Criminal defense and litigation: Drafting of criminal complaints, civil party representation, and technical defense in the accusatory penal system.',
             'Executive Bilingual Support: Expert English-Spanish contract translation and comprehensive client assistance across all practice areas, provided directly by our Managing Director.'
           ]
+        },
+        {
+          id: 5,
+          title: 'Cross-Border Conciliation & Insolvency',
+          description: 'Strategic advisory for US citizens and entities navigating Colombian alternative dispute resolution and insolvency frameworks. We bridge the gap between jurisdictions to protect your assets and rights.',
+          features: [
+            'Representation of US creditors in Colombian insolvency proceedings and creditors\' boards.',
+            'Advisory in extrajudicial conciliation for legal disputes originating in Colombia.',
+            'Direct liaison with authorized Colombian Conciliation Centers.',
+            'Cross-border debt collection and settlement negotiations.'
+          ]
         }
       ]
     },
@@ -176,6 +187,17 @@ export const translations = {
             'Elaboración de denuncios penales, representación de parte civil y defensa técnica en el sistema penal acusatorio.',
             'Soporte legal bilingüe: Traducción certificada de contratos (inglés-español) y asistencia integral al cliente en todas las áreas, gestionada directamente por la Gerencia.'
           ]
+        },
+        {
+          id: 5,
+          title: 'Conciliación e Insolvencia Transfronteriza',
+          description: 'Asesoría estratégica para ciudadanos y entidades de EE. UU. frente a mecanismos colombianos de resolución de conflictos e insolvencia. Servimos de puente jurisdiccional para proteger sus derechos y patrimonio.',
+          features: [
+            'Representación de acreedores estadounidenses en mesas de insolvencia en Colombia.',
+            'Asesoría en conciliación extrajudicial para disputas legales originadas en territorio colombiano.',
+            'Enlace y gestión directa con Centros de Conciliación autorizados en Colombia.',
+            'Negociación de acuerdos y recuperación de cartera a nivel internacional.'
+          ]
         }
       ]
     },
@@ -217,8 +239,6 @@ export const translations = {
       tooltip: 'Chatea con nosotros',
       comingSoon: 'La función de chat en vivo estará disponible pronto. Por favor, utilice nuestro formulario de contacto o correo electrónico mientras tanto.'
     }
-  
-    
   }
 };
 
