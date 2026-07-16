@@ -246,6 +246,7 @@ const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState('en');
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
   const toggleLanguage = () => {
     setLanguage((prevLang) => (prevLang === 'en' ? 'es' : 'en'));
@@ -254,7 +255,7 @@ export const LanguageProvider = ({ children }) => {
   const t = translations[language];
 
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage, t }}>
+    <LanguageContext.Provider value={{ language, toggleLanguage,t, isChatOpen, setIsChatOpen }}>
       {children}
     </LanguageContext.Provider>
   );

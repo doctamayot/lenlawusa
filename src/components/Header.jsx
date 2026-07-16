@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const { language, toggleLanguage, t } = useLanguage();
+  const [isOpen, setIsOpen, ] = useState(false);
+  const { language, toggleLanguage, t, setIsChatOpen } = useLanguage();
 
   return (
     <header className="fixed w-full top-0 z-50 bg-brand-dark/95 backdrop-blur-md border-b border-brand-gold/15 transition-all duration-300">
@@ -25,6 +25,7 @@ const Header = () => {
                 USA
               </span>
             </div>
+            
           </div>
           
           {/* NAVEGACIÓN DESKTOP */}
@@ -50,10 +51,13 @@ const Header = () => {
 
           {/* BOTÓN CTA DESKTOP */}
           <div className="hidden md:flex">
-            <a href="#contact" className="bg-brand-gold hover:bg-brand-gold-light text-brand-dark font-semibold py-2.5 px-6 rounded-sm transition-all duration-300 uppercase tracking-widest text-xs border border-transparent hover:shadow-[0_0_15px_rgba(197,160,89,0.3)]">
-              {t.nav.cta}
-            </a>
-          </div>
+         <button 
+           onClick={() => setIsChatOpen(true)} 
+           className="bg-brand-gold hover:bg-brand-gold-light text-brand-dark font-semibold py-2.5 px-6 rounded-sm transition-all duration-300 uppercase tracking-widest text-xs border border-transparent hover:shadow-[0_0_15px_rgba(197,160,89,0.3)]"
+         >
+           {t.nav.cta}
+         </button>
+       </div>
 
           {/* BOTONES MÓVIL (Selector dinámico + Hamburguesa) */}
           <div className="flex md:hidden items-center space-x-3">
@@ -98,9 +102,12 @@ const Header = () => {
           <a href="#services" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-medium text-brand-silver hover:text-brand-gold">{t.nav.services}</a>
           <a href="#contact" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-medium text-brand-silver hover:text-brand-gold">{t.nav.contact}</a>
           <div className="pt-4 border-t border-brand-charcoal">
-            <a href="#contact" onClick={() => setIsOpen(false)} className="block w-full text-center bg-brand-gold text-brand-dark font-semibold py-3 px-4 rounded-sm uppercase tracking-widest text-sm">
+            <button 
+              onClick={() => { setIsOpen(false); setIsChatOpen(true); }} 
+              className="block w-full text-center bg-brand-gold text-brand-dark font-semibold py-3 px-4 rounded-sm uppercase tracking-widest text-sm"
+            >
               {t.nav.cta}
-            </a>
+            </button>
           </div>
         </div>
       </div>
